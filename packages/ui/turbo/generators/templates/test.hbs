@@ -1,0 +1,21 @@
+import {
+    render,
+    screen
+} from '@testing-library/react';
+import renderer from 'react-test-renderer';
+
+import {{ pascalCase name }}, { type {{ pascalCase name }}Props }  from './{{ pascalCase name }}';
+
+describe('{{ pascalCase name }}', () => {
+    it('snapshot is unchanged', () => {
+        const toRender = (
+            <{{ pascalCase name }}>
+                Hello WOrld
+            </{{ pascalCase name }}>
+        );
+
+        const tree = reactTestRenderer.create(toRender).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+});

@@ -1,19 +1,21 @@
 {
+  "name": "turbo-example",
   "private": true,
   "scripts": {
+    "migrate": "turbo run migrate",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "type-check": "turbo run type-check",
+    "checks": "turbo run lint test type-check",
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "clean": "turbo run clean"
   },
   "devDependencies": {
-    "@turbo/gen": "^1.9.7",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "*",
-    "prettier": "^2.5.1",
-    "turbo": "latest"
+    "@/eslint-config-custom": "*",
+    "@turbo/gen": "^1.10.12",
+    "turbo": "1.10.12"
   },
-  "name": "turbo-example",
   "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",

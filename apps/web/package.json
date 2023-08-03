@@ -6,20 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --cache --format codeframe --ext .js,.jsx,.mjs,.json,.ts,.tsx",
+    "test": "node -e \"console.log('mock test')\"",
+    "type-check": "tsc --pretty --noEmit",
+    "migrate": "node -e \"console.log('mock migrate')\"",
+    "codegen": "node codegen.mjs",
+    "clean": "rm -rf .turbo && rm -rf .next"
   },
   "dependencies": {
-    "next": "^13.4.1",
+    "@/ui": "*",
+    "next": "^13.4.12",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "ui": "*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "eslint-config-custom": "*",
-    "tsconfig": "*",
-    "typescript": "^4.5.3"
+    "@/eslint-config-custom": "*",
+    "@/tsconfig": "*",
+    "@types/node": "^18.5.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2"
   }
 }

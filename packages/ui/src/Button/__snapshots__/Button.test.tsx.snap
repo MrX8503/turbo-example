@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshot is unchanged 1`] = `
+<button
+  className="ui-text-red-800 ui-bg-slate-700 "
+  type="button"
+>
+  Hello WOrld
+</button>
+`;

@@ -1,0 +1,24 @@
+import { {{ pascalCase name }} } from '@/ui/src';
+
+export default {
+    title: 'Components/{{ pascalCase name }}',
+    component: {{ pascalCase name }},
+    // https://storybook.js.org/docs/react/writing-docs/autodocs
+    tags: ['autodocs'],
+    parameters: {
+        // https://storybook.js.org/docs/react/configure/story-layout
+        layout: 'padded'
+    }
+};
+
+export const StateOne = {
+    args: {
+        children: 'Hello 1'
+    }
+};
+
+export const StateTwo = {
+    args: {
+        children: 'Hello 2'
+    }
+};

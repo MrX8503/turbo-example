@@ -1,0 +1,44 @@
+{
+  "extends": ["//"],
+  "pipeline": {
+    "migrate": {
+      "inputs": ["migrations/**"]
+    },
+    "codegen": {
+      "cache": false,
+      "dependsOn": ["migrate"],
+      "inputs": ["codegen.mjs"],
+      "outputs": ["src/codegen/**"]
+    },
+    "build": {
+      "dependsOn": ["codegen"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "dev": {
+      "dependsOn": ["codegen"]
+    },
+    "test": {
+      "dependsOn": ["codegen"],
+      "inputs": [
+        "src/**",
+        "!*.snap"
+      ]
+    },
+    "lint": {
+      "dependsOn": ["codegen"],
+      "inputs": [
+        "**/*.{js,jsx,json,mjs,cjs,ts,tsx}",
+        "!.*",
+        "!node_modules"
+      ]
+    },
+    "type-check": {
+      "dependsOn": ["codegen"],
+      "inputs": [
+        "**/*.{js,jsx,json,mjs,cjs,ts,tsx}",
+        "!.*",
+        "!node_modules"
+      ]
+    }
+  }
+}
