@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card snapshot is unchanged 1`] = `
+[
+  <h1>
+    Card Component
+  </h1>,
+  "Hello World",
+]
+`;
