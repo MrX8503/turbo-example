@@ -11,7 +11,7 @@
       "outputs": ["src/codegen/**"]
     },
     "build": {
-      "dependsOn": ["codegen"],
+      "dependsOn": ["^build", "codegen"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "dev": {
