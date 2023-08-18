@@ -1,7 +1,3 @@
-import {
-    Button
-} from '@/ui/src';
-
 import '@/ui/src/styles/globals.css';
 
 export default function RootLayout({
@@ -11,8 +7,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>{children}</body>
-            <Button>Hello World</Button>
+            <body>
+                {children}
+            </body>
         </html>
     );
 }

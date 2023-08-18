@@ -9,14 +9,6 @@ module.exports = {
         'src/**/*.{js,ts,jsx,tsx}'
     ],
     prefix: 'ui-',
-    theme: {
-        extend: {
-            colors: {
-                red: {
-                    800: 'green'
-                }
-            }
-        }
-    },
+    theme: {},
     plugins: []
 };

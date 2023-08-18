@@ -11,14 +11,15 @@ export default {
     }
 };
 
-export const StateOne = {
+export const Primary = {
     args: {
-        children: 'Hello 1'
+        children: 'Primary'
     }
 };
 
-export const StateTwo = {
+export const Danger = {
     args: {
-        children: 'Hello 2'
+        children: 'Danger',
+        intent: 'danger'
     }
 };
